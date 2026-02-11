@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "types": ["vitest/globals", "chai", "node"],
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "target"]
+}

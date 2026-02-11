@@ -1,0 +1,31 @@
+[toolchain]
+anchor_version = "0.32.0"
+solana_version = "2.3.0"
+package_manager = "pnpm"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+lending = "7tjE28izRUjzmxC1QNXnNwcc4N82CNYCexf3k8mw67s3"
+lending_reward_rate_model = "68LHLkpgjAvo6Lgd9FT6KYEX4FWn1911EohSXxHYMFjc"
+liquidity = "5uDkCoM96pwGYhAUucvCzLfm5UcjVRuxz6gH81RnRBmL"
+oracle = "C59ahnV7xHuW1Q9E87yrYbCHMHaYnkqRdix8BfLp3vnk"
+vaults = "Ho32sUQ4NzuAQgkPkHuNDG3G18rgHmYtXFA8EBmqQrAu"
+flashloan = "aaae6RAZNe4wLgKkjKnJxqQ15B58yPUdcygDbTUpXo3"
+
+[programs.mainnet]
+lending = "jup3YeL8QhtSx1e253b2FDvsMNC87fDrgQZivbrndc9"
+lending_reward_rate_model = "jup7TthsMgcR9Y3L277b8Eo9uboVSmu1utkuXHNUKar"
+liquidity = "jupeiUmn818Jg1ekPURTpr4mFo29p46vygyykFJ3wZC"
+oracle = "jupnw4B6Eqs7ft6rxpzYLJZYSnrpRgPcr589n5Kv4oc"
+vaults = "jupr81YtYssSyPt8jbnGuiWon5f6x9TcDEFxYe3Bdzi"
+flashloan = "jupgfSgfuAXv4B6R2Uxu85Z1qdzgju79s6MfZekN6XS"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"

@@ -1,0 +1,16 @@
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
+test-ledger
+.yarn
+.cursor/
+.env
+tsconfig.tsbuildinfo
+dist/
+deploy/
+keys/
+.compute_budget/
+devnet/
+docker-target/

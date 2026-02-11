@@ -1,0 +1,39 @@
+Fluid Contracts Solana
+Copyright 2025 - INSTADAPP LABS INC
+
+This product software is a property of INSTADAPP LABS INC
+
+Use of this software is covered by the Business Source License included in the LICENSE file and at www.mariadb.com/bsl11.
+
+Change Date: 2029-07-24
+
+On the date above, in accordance with the Business Source License, use of this software will be governed by the open source license specified in the LICENSE file.
+
+This software contains derivative work or is inspired by the following Apache-licensed projects:
+
+1. Token Lending Program (Solana Program Library)
+   Copyright: Solana Labs Maintainers <maintainers@solanalabs.com>
+   License: Apache License 2.0
+   Source: https://github.com/solana-labs/solana-program-library/tree/master/token-lending
+   Note: Portions of code used and modified
+
+2. Drift Protocol Math Functions
+   Copyright: 2021 Drift Labs
+   License: Apache License 2.0
+   Source: https://github.com/drift-labs/protocol-v2/blob/master/programs/drift/src/math/
+   Files containing derivative work:
+   - crates/library/src/math/ceil_div.rs
+   - crates/library/src/math/floor_div.rs
+   - crates/library/src/math/casting.rs
+   - crates/library/src/math/safe_math.rs
+     Note: Selected math utility functions used and improved. These specific files contain
+     code derived from Apache 2.0 licensed sources and remain under Apache 2.0 license.
+
+3. Orace Whirlpools u256 Math (2024 version)
+   Copyright: 2022 Orca Foundation
+   License: Apache License 2.0
+   Source: https://github.com/orca-so/whirlpools/blob/810f504e323f814c7b9fc3f59af53428b9cc92b1/programs/whirlpool/src/math/u256_math.rs
+   Files containing derivative work:
+   - crates/library/src/math/u256.rs
+     Note: Selected math utility functions used and improved. These specific files contain
+     code derived from Apache 2.0 licensed sources and remain under Apache 2.0 license.

@@ -1,0 +1,23 @@
+[package]
+name = "library"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "library"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { version="=0.32.0", features=["init-if-needed"] }
+anchor-spl = "=0.32.0"
+num-traits = "0.2"
+solana-program = "2.3.0"

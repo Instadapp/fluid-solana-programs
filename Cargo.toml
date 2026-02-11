@@ -1,0 +1,23 @@
+[workspace]
+members = [
+    "programs/*",
+    "crates/*",
+    "test-utils/rust",
+    "tests",
+]
+resolver = "2"
+
+[workspace.package]
+license = "BUSL-1.1"
+authors = ["INSTADAPP LABS INC <info@instadapp.io>"]
+version = "1.0.0"
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1

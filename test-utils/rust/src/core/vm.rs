@@ -11,6 +11,7 @@ use solana_sdk::{account::Account, pubkey::Pubkey, signature::Keypair, signer::S
 use crate::{
     errors::{Result, VmError},
     fork::ForkProvider,
+    helpers::path::validate_readable_path,
     internal::conversions::to_lite_pubkey,
 };
 
@@ -182,10 +183,11 @@ impl Vm {
 
     /// Add program from .so file
     pub fn add_program_from_file(&mut self, program_id: &Pubkey, file_path: &str) -> Result<()> {
-        let bytecode = std::fs::read(file_path)?;
+        let safe_path = validate_readable_path(file_path)?;
+        let bytecode = std::fs::read(&safe_path)?;
         self.add_program(program_id, &bytecode)?;
         self.program_names
-            .insert(*program_id, file_path.to_string());
+            .insert(*program_id, safe_path.to_string_lossy().into_owned());
         Ok(())
     }
 

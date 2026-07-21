@@ -3,6 +3,7 @@
 pub mod assertions;
 pub mod fixtures;
 pub mod lookup_table;
+pub mod path;
 pub mod tokens;
 
 pub use assertions::{Assertions, ExpectRevertExt, ExpectRevertResultExt, RevertInfo, VmAccess};

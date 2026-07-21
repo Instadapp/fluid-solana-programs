@@ -6,6 +6,7 @@
 use crate::{
     core::{accounts::AccountManager, state::StateManager, vm::Vm},
     errors::{Result, VmError},
+    helpers::path::validate_readable_path,
 };
 use solana_sdk::account::Account;
 use solana_sdk::{
@@ -187,10 +188,11 @@ impl LookupTableHelper {
         table_address: &Pubkey,
         file_path: P,
     ) -> Result<()> {
-        let file_content = std::fs::read_to_string(file_path.as_ref()).map_err(|e| {
+        let safe_path = validate_readable_path(file_path.as_ref())?;
+        let file_content = std::fs::read_to_string(&safe_path).map_err(|e| {
             VmError::Custom(format!(
                 "Failed to read lookup table file '{}': {}",
-                file_path.as_ref().display(),
+                safe_path.display(),
                 e
             ))
         })?;
